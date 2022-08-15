@@ -53,17 +53,11 @@ export const Post = () => {
       {/* card */}
       <article className="flex flex-col gap-[.8rem] lg:gap-[2rem] lg:w-[60%] m-auto lg:m-0">
         {/* navigation btn */}
-        <div
-          className="p-[.4rem] lg:ml-[4rem] flex items-center cursor-pointer"
-          onClick={() => navigate("/")}
-        >
-          <i
-            className="fa fa-long-arrow-left mr-[0.4rem] bg-gray-300 hover:bg-gray-200 p-[.4rem] lg:p-[.5rem] rounded-full"
-            aria-hidden="true"
-          ></i>
+        <div className='p-[.4rem] lg:ml-[4rem] flex items-center cursor-pointer' onClick={() => navigate('/')}>
+          <i className="fa fa-long-arrow-left mr-[0.4rem] bg-gray-300 hover:bg-gray-200 p-[.4rem] lg:p-[.5rem] rounded-full" aria-hidden="true"></i>
           <p>Posts</p>
-        </div>
-
+          </div>
+          
         {/* card title */}
         <header className="font-[600] p-[.4rem] lg:py-[1rem] lg:px-[4rem] text-[1.4rem] lg:text-[1.4rem] capitalize">
           {post?.title}
@@ -77,22 +71,18 @@ export const Post = () => {
         {/* buttons */}
         {post.userId === userId && (
           <div className="flex gap-[.6rem] lg:gap-[1.5rem] justify-end p-[.4rem] lg:py-[1rem] lg:px-[4rem]">
-            <Modal
+           <Modal
               variant="danger"
               handler={handleDelete}
-              handlerText="Proceed"
-              header="Delete Post"
-              text="You cannot reverse this process once initiated!"
+              handlerText='Proceed'
+              header='Delete Post'
+              text='You cannot reverse this process once initiated!'
             >
-              <span>
-                <i className="fa fa-trash-o mr-[.4rem]" aria-hidden="true"></i>
-              </span>
+              <span><i className="fa fa-trash-o mr-[.4rem]" aria-hidden="true"></i></span>
               Delete
             </Modal>
             <Button variant="primary" onClick={handleClick}>
-              <span>
-                <i className="fa fa-pencil mr-[.4rem]" aria-hidden="true"></i>
-              </span>
+              <span><i className="fa fa-pencil mr-[.4rem]" aria-hidden="true"></i></span>
               Update
             </Button>
           </div>
