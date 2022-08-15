@@ -112,7 +112,7 @@ function Home() {
           </section>
 
           {/* posts section */}
-          <article className="flex flex-wrap gap-[1.5rem] lg:gap-[3.5rem] w-[100%] lg:w-[85%] mt-[1rem] lg:m-auto">
+          <article className="flex flex-wrap gap-[1.5rem] lg:gap-[3.5rem] w-[100%] lg:w-[8%] mt-[1rem] lg:m-auto">
             {posts.map((post, _i) => {
               return (
                 <Fragment key={_i}>
