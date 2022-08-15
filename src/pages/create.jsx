@@ -57,11 +57,17 @@ export const Create = () => {
       {/* card */}
       <form
         onSubmit={handleCreatePost}
-        className="flex flex-col gap-[.8rem] lg:gap-[2rem] lg:w-[75%] m-auto"
+        className="flex flex-col gap-[.8rem] lg:gap-[2rem] lg:w-[60%] m-auto lg:m-0"
       >
+        {/* navigation btn */}
+        <div className='p-[.4rem] lg:ml-[4rem] flex items-center gap-[] lg:gap-[1rem] cursor-pointer' onClick={() => navigate('/')}>
+          <i className="fa fa-long-arrow-left bg-gray-300 hover:bg-gray-200 p-[.4rem] lg:p-[.5rem] rounded-full" aria-hidden="true"></i>
+          <p>Posts</p>
+          </div>
+
         {/* card title */}
         <textarea
-          className="font-[600] bg-gray-300 p-[.4rem] lg:py-[1rem] lg:px-[4rem] text-[] lg:text-[1.4rem] rounded-[6px] shadow-md placeholder:italic"
+          className="font-[600] bg-gray-300 p-[.4rem] lg:py-[1rem] lg:ml-[7.5rem] text-[] lg:text-[1.4rem] rounded-[6px] shadow-md placeholder:italic"
           placeholder="Post header"
           defaultValue={title}
           name="title"
@@ -70,7 +76,7 @@ export const Create = () => {
 
         {/* card content */}
         <textarea
-          className="bg-gray-300 p-[.4rem] lg:py-[1rem] lg:px-[4rem] lg:pb-[3rem] text-gray-600 rounded-[6px] shadow-md placeholder:italic"
+          className="bg-gray-300 p-[.4rem] lg:py-[1rem] lg:ml-[7.5rem] lg:pb-[3rem] text-gray-600 rounded-[6px] shadow-md placeholder:italic"
           placeholder="Enter your post here"
           defaultValue={body}
           name="body"

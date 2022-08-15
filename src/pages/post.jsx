@@ -51,7 +51,13 @@ export const Post = () => {
   return (
     <section className="bg-white my-[] lg:my-[2rem] py-[] lg:py-[2.5rem]">
       {/* card */}
-      <article className="flex flex-col gap-[.8rem] lg:gap-[2rem] lg:w-[75%] m-auto">
+      <article className="flex flex-col gap-[.8rem] lg:gap-[2rem] lg:w-[60%] m-auto lg:m-0">
+        {/* navigation btn */}
+        <div className='p-[.4rem] lg:ml-[4rem] flex items-center cursor-pointer' onClick={() => navigate('/')}>
+          <i className="fa fa-long-arrow-left mr-[0.4rem] bg-gray-300 hover:bg-gray-200 p-[.4rem] lg:p-[.5rem] rounded-full" aria-hidden="true"></i>
+          <p>Posts</p>
+          </div>
+          
         {/* card title */}
         <header className="font-[600] p-[.4rem] lg:py-[1rem] lg:px-[4rem] text-[1.4rem] lg:text-[1.4rem] capitalize">
           {post?.title}
